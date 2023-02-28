@@ -7,3 +7,4 @@
 5. Pair Sum
 6. Pair Product
 7. Intersection of Slices
+8. Five Sort
