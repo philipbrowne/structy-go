@@ -8,17 +8,17 @@ type Node struct {
 }
 
 func main () {
-	a := Node{Val: 2}
-	b := Node{Val: 8}
-	c := Node{Val: 3}
-	d := Node{Val: -1}
-	e := Node{Val: 7}
-	a.Next = &b
-	b.Next = &c
-	c.Next = &d
-	d.Next = &e
-	fmt.Println("Iterative Total", linkedListSumIterative(&a))
-	fmt.Println("Recursive Total", linkedListSumRecursive(&a))
+	a := &Node{Val: 2}
+	b := &Node{Val: 8}
+	c := &Node{Val: 3}
+	d := &Node{Val: -1}
+	e := &Node{Val: 7}
+	a.Next = b
+	b.Next = c
+	c.Next = d
+	d.Next = e
+	fmt.Println("Iterative Total", linkedListSumIterative(a))
+	fmt.Println("Recursive Total", linkedListSumRecursive(a))
 }
 
 // Iterative Solution
