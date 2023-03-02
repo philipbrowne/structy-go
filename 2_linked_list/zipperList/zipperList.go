@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 type Node struct {
 	Val  interface{}
 	Next *Node
@@ -25,12 +23,6 @@ func main () {
 	y.Next = z
 
 	zipperListRecursive(a, x)
-	fmt.Println(a.Next.Val)
-	fmt.Println(a.Next.Next.Val)
-	fmt.Println(a.Next.Next.Next.Val)
-	fmt.Println(a.Next.Next.Next.Next.Val)
-	fmt.Println(a.Next.Next.Next.Next.Next.Val)
-	fmt.Println(a.Next.Next.Next.Next.Next.Next.Val)
 }
 
 // Iterative Solution
@@ -57,8 +49,6 @@ func zipperListRecursive (head1 *Node, head2 *Node) *Node {
 	if head2 == nil {
 		return head1
 	}
-	fmt.Println(head1.Next)
-	fmt.Println(head2.Next)
 	next1 := head1.Next
 	next2 := head2.Next
 	head1.Next = head2
