@@ -7,7 +7,4 @@
 5. Pair Sum
 6. Pair Product
 7. Intersection of Slices
-<<<<<<< HEAD
-=======
 8. Five Sort
->>>>>>> a01397cedc28bf490e1315ab1e0dc154b38374ec
