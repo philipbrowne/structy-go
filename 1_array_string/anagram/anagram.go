@@ -6,11 +6,11 @@ import (
 )
 
 func main () {
-	isAnagram := anagram(os.Args[1], os.Args[2])
+	isAnagram := anagrams(os.Args[1], os.Args[2])
 	fmt.Println("Is Anagram: ", isAnagram)
 }
 
-func anagram(s string, t string) bool {
+func anagrams(s string, t string) bool {
 	if len(s) != len(t) {
 		return false
 	}

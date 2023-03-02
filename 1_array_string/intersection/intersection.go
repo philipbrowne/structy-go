@@ -30,7 +30,7 @@ func intersection(a []interface{}, b []interface{}) []interface{} {
 		setA[el] = &isIncluded
 	}
 	for _, el := range b {
-		if setA[el] != nil && *setA[el] == true {
+		if setA[el] != nil && *setA[el] {
 			res = append(res, el)
 		}
 	}

@@ -6,12 +6,10 @@ import (
 )
 
 func main () {
-	fmt.Printf("Most frequent char in %s is: %s\n", os.Args[1], mostFrequent(os.Args[1]))
+	fmt.Printf("Most frequent char in %s is: %s\n", os.Args[1], mostFrequentChar(os.Args[1]))
 }
 
-// mostFrequent("bookeeper") -> "e"
-// mostFrequent("abby") -> "b"
-func mostFrequent(s string) string {
+func mostFrequentChar(s string) string {
 	count := map[rune]int{}
 	for _, char := range s {
 		count[char]++
