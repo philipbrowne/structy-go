@@ -15,27 +15,23 @@ func main () {
 	a.Next = &b
 	b.Next = &c
 	c.Next = &d
+	printListRecursive(&a)
 }
 
 // Printing Linked List Iteratively
-func printListIteratively(head Node) {
+func printListIteratively(head *Node) {
 	current := head
-	for {
+	for current != nil {
 		fmt.Println(current.Val)
-		if current.Next == nil {
-			break
-		}
-		current = *current.Next
+		current = current.Next
 	}
 }
 
 // Printing Linked List Recursively
-func printListRecursive(head Node) {
-	if &head == nil { 
+func printListRecursive(head *Node) {
+	if head == nil { 
 		return
 	}
 	fmt.Println(head.Val)
-	if head.Next != nil {
-		printListRecursive(*head.Next)
-	}
+	printListRecursive(head.Next)
 }
