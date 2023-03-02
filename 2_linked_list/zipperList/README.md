@@ -24,6 +24,6 @@ z := &Node{Val: "Z"}
 x.Next = y
 y.Next = z
 
-zipperList(a, y)
+zipperList(a, x)
 // "A" -> "X" -> "B" -> "Y" -> "Z" -> "D"
 ```
