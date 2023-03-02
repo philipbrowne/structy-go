@@ -5,3 +5,4 @@
 3. Find Value in Linked List
 4. Get Node Value at Index
 5. Reverse Linked List
+6. Zipper Lists
