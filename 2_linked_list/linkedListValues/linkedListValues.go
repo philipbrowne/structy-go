@@ -16,6 +16,7 @@ func main () {
 	b.Next = c
 	c.Next = d
 	fmt.Println(linkedListValuesRecursive(a))
+	fmt.Println(linkedListValuesIterative(b))
 }
 
 // Iterative Method
@@ -23,7 +24,7 @@ func linkedListValuesIterative(head *Node) []interface{} {
 	values := []interface{}{}
 	current := head
 	for current != nil {
-		values = append(values, current)
+		values = append(values, current.Val)
 		current = current.Next
 	}
 	return values
