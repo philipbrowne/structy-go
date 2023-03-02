@@ -6,17 +6,17 @@ You can assume that the input string is non-empty.
 
 ```
 test_00:
-mostFrequentChar('bookeeper'); // -> 'e'
+mostFrequentChar("bookeeper") // -> "e"
 test_01:
-mostFrequentChar('david'); // -> 'd'
+mostFrequentChar("david") // -> "d"
 test_02:
-mostFrequentChar('abby'); // -> 'b'
+mostFrequentChar("abby") // -> "b"
 test_03:
-mostFrequentChar('mississippi'); // -> 'i'
+mostFrequentChar("mississippi") // -> "i"
 test_04:
-mostFrequentChar('potato'); // -> 'o'
+mostFrequentChar("potato") // -> "o"
 test_05:
-mostFrequentChar('eleventennine'); // -> 'e'
+mostFrequentChar("eleventennine") // -> "e"
 test_06:
-mostFrequentChar("riverbed"); // -> 'r'
+mostFrequentChar("riverbed") // -> "r"
 ```
