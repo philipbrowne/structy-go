@@ -17,17 +17,17 @@ d.Next = e
 e.Next = f
 longestStreak(a) // 3
 
-    Test 2:
-    a := &Node{Val: 3}
-	b := &Node{Val: 3}
-	c := &Node{Val: 3}
-	d := &Node{Val: 3}
-	e := &Node{Val: 9}
-	f := &Node{Val: 9}
-	a.Next = b
-	b.Next = c
-	c.Next = d
-	d.Next = e
-	e.Next = f
-	longestStreak(a) // 4
+Test 2:
+a := &Node{Val: 3}
+b := &Node{Val: 3}
+c := &Node{Val: 3}
+d := &Node{Val: 3}
+e := &Node{Val: 9}
+f := &Node{Val: 9}
+a.Next = b
+b.Next = c
+c.Next = d
+d.Next = e
+e.Next = f
+longestStreak(a) // 4
 ```
