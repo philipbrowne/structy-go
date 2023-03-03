@@ -8,3 +8,4 @@
 6. Zipper Lists
 7. Merge Lists
 8. Is Univalue List
+9. Longest Streak
