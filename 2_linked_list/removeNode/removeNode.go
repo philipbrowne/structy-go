@@ -6,22 +6,6 @@ type Node struct {
 }
 
 func main () {
-	a := &Node{Val: "A"}
-	b := &Node{Val: "B"}
-	c := &Node{Val: "C"}
-	d := &Node{Val: "D"}
-	e := &Node{Val: "E"}
-	f := &Node{Val: "F"}
-	g := &Node{Val: "G"}
-	h := &Node{Val: "H"}
-	
-	a.Next = b
-	b.Next = c
-	c.Next = d
-	d.Next = e
-	e.Next = f
-	f.Next = g
-	g.Next = h
 }
 
 func removeNodeIterative(head *Node, targetValue interface{}) *Node {
