@@ -7,6 +7,7 @@ type Node struct {
 
 func main () {}
 
+// O(n) Runtime
 func longestStreak(head *Node) int {
 	currentStreak := 0
 	maxStreak := 0

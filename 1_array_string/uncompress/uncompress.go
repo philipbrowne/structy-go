@@ -1,18 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"log"
-	"os"
 	"strconv"
 	"strings"
 )
 
-func main () {
-	uncompressed := uncompress(os.Args[1])
-	fmt.Println(uncompressed)
-}
+func main () {}
 
+// Two Pointer Approach - O(n*m) Runtime, where n is the number of groups and m is the max number found in any group
 func uncompress(s string) string {
 	res := []string{}
 	i := 0

@@ -1,16 +1,13 @@
 package main
 
-import "fmt"
-
 func main() {
-	pair := pairProduct([]int{3, 2, 5, 4, 1}, 10)
-	fmt.Println("Pair Product for {3,2,5,4,1} for a product of 10", pair)
 }
 
 type Num struct {
 	Index int
 }
 
+// Approach using a map - O(n) Runtime
 func pairProduct(numbers []int, target int) []int {
 	previous := map[int]*Num{}
 	for i, num := range numbers {

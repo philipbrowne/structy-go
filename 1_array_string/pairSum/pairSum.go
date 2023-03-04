@@ -1,16 +1,12 @@
 package main
 
-import "fmt"
-
-func main() {
-	pair := pairSum([]int{3,2,5,4,1}, 8)
-	fmt.Println("Pairsum for {3,2,5,4,1} with a sum of 8", pair)
-}
+func main() {}
 
 type Num struct {
 	Index int
 }
 
+// Approach using a Map - O(n) Runtime
 func pairSum(numbers []int, target int) []int {
 	previous := map[int]*Num{}
 	for i, num := range numbers {

@@ -1,25 +1,13 @@
 package main
 
-import "fmt"
-
 type Node struct {
 	Val  interface{}
 	Next *Node
 }
 
-func main () {
-	a := &Node{Val: "A"}
-	b := &Node{Val: "B"}
-	c := &Node{Val: "C"}
-	d := &Node{Val: "D"}
-	a.Next = b
-	b.Next = c
-	c.Next = d
-	fmt.Println(linkedListValuesRecursive(a))
-	fmt.Println(linkedListValuesIterative(b))
-}
+func main () {}
 
-// Iterative Method
+// Iterative Approach - O(n) Runtime
 func linkedListValuesIterative(head *Node) []interface{} {
 	values := []interface{}{}
 	current := head
@@ -30,7 +18,7 @@ func linkedListValuesIterative(head *Node) []interface{} {
 	return values
 }
 
-// Recursive Method
+// Recursive Approach - O(n) Runtime
 func linkedListValuesRecursive(head *Node) []interface{} {
 	if head == nil {
 		return []interface{}{}

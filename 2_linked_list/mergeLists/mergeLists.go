@@ -8,7 +8,7 @@ type Node struct {
 func main () {
 }
 
-// Iterative Approach
+// Iterative Approach - O(min(n,m)) Runtime where n and m are the lengths of each list
 func mergeListsIterative(a, b *Node) *Node {
 	current1 := a
 	current2 := b
@@ -33,7 +33,7 @@ func mergeListsIterative(a, b *Node) *Node {
 	return head.Next
 }
 
-// Recursive Approach
+// Recursive Approach - O(min(n,m)) Runtime where n and m are the lengths of each list
 func mergeListsRecursive(a, b *Node) *Node {
 	if a == nil && b == nil {
 		return nil

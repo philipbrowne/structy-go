@@ -1,14 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
-
 func main () {
-	fmt.Printf("Most frequent char in %s is: %s\n", os.Args[1], mostFrequentChar(os.Args[1]))
 }
 
+// Approach using Map - O(n) Runtime
 func mostFrequentChar(s string) string {
 	count := map[rune]int{}
 	for _, char := range s {

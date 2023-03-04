@@ -5,27 +5,9 @@ type Node struct {
 	Next *Node
 }
 
-func main () {
-	a := &Node{Val: "A"}
-	b := &Node{Val: "B"}
-	c := &Node{Val: "C"}
-	d := &Node{Val: "D"}
-	
-	a.Next = b
-	b.Next = c
-	c.Next = d
+func main () {}
 
-	x := &Node{Val: "X"}
-	y := &Node{Val: "Y"}
-	z := &Node{Val: "Z"}
-
-	x.Next = y
-	y.Next = z
-
-	zipperListRecursive(a, x)
-}
-
-// Iterative Solution
+// Iterative Approach - O(min(n,m)) Runtime where n and m are the lengths of each list
 func zipperListIterative(head1 *Node, head2 *Node) *Node {
 	current := head1
 	opposite := head2
@@ -38,7 +20,7 @@ func zipperListIterative(head1 *Node, head2 *Node) *Node {
 	return head1
 }
 
-// Recursive Solution
+// Recursive Solution - O(min(n,m)) Runtime where n and m are the lengths of each list
 func zipperListRecursive (head1 *Node, head2 *Node) *Node {
 	if head1 == nil && head2 == nil {
 		return nil

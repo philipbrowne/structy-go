@@ -1,15 +1,9 @@
 package main
 
-import (
-	"fmt"
-	"os"
-)
-
 func main () {
-	isAnagram := anagrams(os.Args[1], os.Args[2])
-	fmt.Println("Is Anagram: ", isAnagram)
 }
 
+// Approach using Map - O(n+m) Runtime where n and m are the lengths of each string
 func anagrams(s string, t string) bool {
 	if len(s) != len(t) {
 		return false

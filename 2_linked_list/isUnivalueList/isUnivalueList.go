@@ -8,6 +8,7 @@ type Node struct {
 func main () {
 }
 
+// Iterative Approach - O(n) Runtime
 func isUnivalueListIterative(head *Node) bool {
 	current := head
 	val := head.Val
@@ -20,6 +21,7 @@ func isUnivalueListIterative(head *Node) bool {
 	return true
 }
 
+// Recursive Approach - O(n) Runtime
 func isUnivalueListRecursive(head *Node, prev ...interface{}) bool {
 	if head == nil { 
 		return true

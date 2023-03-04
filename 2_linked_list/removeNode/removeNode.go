@@ -8,6 +8,7 @@ type Node struct {
 func main () {
 }
 
+// Iterative Approach - O(n) Runtime
 func removeNodeIterative(head *Node, targetValue interface{}) *Node {
 	if head.Val == targetValue {
 		return head.Next
@@ -25,6 +26,7 @@ func removeNodeIterative(head *Node, targetValue interface{}) *Node {
 	return head
 }
 
+// Recursive Approach - O(n) Runtime
 func removeNodeRecursive(head *Node, targetValue interface{}) *Node {
 	if head == nil {
 		return nil

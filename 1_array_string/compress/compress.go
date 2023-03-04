@@ -1,20 +1,13 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"strconv"
 	"strings"
 )
 
-func main () {
-	compressed := compress(os.Args[1])
-	fmt.Println(compressed)
-}
+func main () {}
 
-// compress("ssssbbz") -> "4s2bz"
-// compress("ppoppppp") -> "2po5p"
-// compress("ccaaatsss") -> "2c3a53s"
+// Two Pointer Approach - O(n) Runtime
 func compress (s string) string {
 	res := []string{}
 	i := 0
