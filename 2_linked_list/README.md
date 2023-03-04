@@ -10,3 +10,4 @@
 8. Is Univalue List
 9. Longest Streak
 10. Remove Node
+11. Insert Node
