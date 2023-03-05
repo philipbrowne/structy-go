@@ -9,6 +9,7 @@ func main () {
 
 }
 
+// Iterative Approach - O(max(n,m)) Runtime where n and m are the lengths of each list
 func addListsIterative(head1, head2 *Node) *Node {
 	head := &Node{}
 	tail := head
@@ -43,6 +44,7 @@ func addListsIterative(head1, head2 *Node) *Node {
 	return head.Next
 }
 
+// Recursive Approach - O(max(n,m)) Runtime where n and m are the lengths of each list
 func addListsRecursive(head1, head2 *Node, carry ...int) *Node {
 	if len(carry) == 0 {
 		carry = append(carry, 0)
