@@ -8,6 +8,7 @@ type Node struct {
 
 func main () {}
 
+// Iterative Approach - O(n) Runtime
 func depthFirstValuesIterative(root *Node) []interface{} {
 	if root == nil {
 		return []interface{}{}
@@ -28,6 +29,7 @@ func depthFirstValuesIterative(root *Node) []interface{} {
 	return values
 }
 
+// Recursive Approach - O(n) Runtime
 func depthFirstValuesRecursive(root *Node) []interface{} {
 	if root == nil {
 		return []interface{}{}
