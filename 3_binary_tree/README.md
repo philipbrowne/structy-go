@@ -3,3 +3,4 @@
 1. Depth First Values
 2. Breadth First Values
 3. Tree Sum
+4. Tree Includes
