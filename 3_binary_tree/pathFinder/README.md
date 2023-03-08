@@ -1,6 +1,6 @@
 # Tree Path Finder
 
-Write a function, pathFinder, that takes in the root of a binary tree and a target value. The function should return a slice representing a path to the target value. If the target value is not found in the tree, then return null.
+Write a function, pathFinder, that takes in the root of a binary tree and a target value. The function should return a slice representing a path to the target value. If the target value is not found in the tree, then return nil.
 
 You may assume that the tree contains unique values.
 
