@@ -28,7 +28,7 @@ func treeValueCount_DFI(root *Node, target interface{}) int {
 		return 0
 	}
 	count := 0
-	stack := []*Node{}
+	stack := []*Node{root}
 	for len(stack) > 0 {
 		node := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
