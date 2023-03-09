@@ -7,7 +7,7 @@ type Node struct {
 
 func main () {}
 
-// O(n) Runtime
+// Iterative - O(n) Runtime
 func longestStreak(head *Node) int {
 	currentStreak := 0
 	maxStreak := 0
@@ -26,4 +26,21 @@ func longestStreak(head *Node) int {
 		currentNode = currentNode.Next
 	}
 	return maxStreak
+}
+
+func longestStreakRecursive(head *Node, streak int, longest int, prev ...interface{}) int {
+	if len(prev) == 0 {
+		prev = []interface{}{nil}
+	}
+	if streak > longest {
+		longest = streak
+	}
+	if head == nil {
+		return longest
+	}
+	if prev[0] == nil || head.Val == prev[0] {
+		return longestStreakRecursive(head.Next, streak+1, longest, head.Val)
+	} else {
+		return longestStreakRecursive(head.Next, 1, longest, head.Val)
+	}
 }
