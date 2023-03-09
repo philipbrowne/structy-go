@@ -8,6 +8,7 @@ type Node struct {
 
 func main () {}
 
+// Depth First Recursive
 func allTreePaths(root *Node) [][]interface{} {
 	 if root == nil {
 		return [][]interface{}{}
