@@ -8,6 +8,7 @@ type Node struct {
 
 func main () {}
 
+// Depth First Iterative - O(n) Runtime
 func leafListDFI(root *Node) []interface{} {
 	if root == nil {
 		return []interface{}{}
@@ -30,12 +31,14 @@ func leafListDFI(root *Node) []interface{} {
 	return leafs
 }
 
+// Depth First Recursive - O(n) Runtime
 func leafListDFR(root *Node) []interface{} {
 	leafs := &[]interface{}{}
 	leafListHelper(root, leafs)
 	return *leafs
 }
 
+// Helper Recursive Function
 func leafListHelper(root *Node, leafs *[]interface{}) {
 	if root == nil {
 		return
