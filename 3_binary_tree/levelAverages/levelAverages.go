@@ -1,48 +1,42 @@
 package main
 
+// Binary Tree Node containing Integer Value
 type Node struct {
-	Val interface{}
+	Val int
 	Left *Node
 	Right *Node
 }
 
-type LevelNode struct {
-	Node *Node
-	Level int
-}
-
-func main () {}
-
 // Depth First Recursive - O(n) Runtime
 func levelAverages(root *Node) []float64{
-	levels := [][]interface{}{}
-	treeLevelsHelper(root, &levels, 0)
-	averages := []float64{}
+	levels := [][]int{}
+	treeLevels(root, &levels, 0)
+	averages := make([]float64, 0, len(levels))
 	for _, level := range levels {
 		averages = append(averages, average(level))
 	}
 	return averages
 }
 
-// Helper Function for Tree Levels Recursive
-func treeLevelsHelper(root *Node, levels *[][]interface{}, levelNum int) {
+// Helper Recursive Function for Getting Values of Each Binary Tree Level
+func treeLevels(root *Node, levels *[][]int, levelNum int) {
 	if root == nil {
 		return
 	}
 	if len(*levels) <= levelNum {
-		*levels = append(*levels, []interface{}{root.Val})
+		*levels = append(*levels, []int{root.Val})
 	} else {
 		(*levels)[levelNum] = append((*levels)[levelNum], root.Val)
 	}
-	treeLevelsHelper(root.Left, levels, levelNum+1)
-	treeLevelsHelper(root.Right, levels, levelNum+1)
+	treeLevels(root.Left, levels, levelNum+1)
+	treeLevels(root.Right, levels, levelNum+1)
 }
 
-func average(nums []interface{}) float64 {
+// Utility Function
+func average(nums []int) float64 {
 	sum := 0.0
 	for _, num := range nums {
-		number := num.(int)
-		sum += float64(number)
+		sum += float64(num)
 	}
-	return sum / float64(len(nums))
+  return sum / float64(len(nums))
 }
